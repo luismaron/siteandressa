@@ -33,11 +33,10 @@ export default function Product({ product }: ProductProps) {
           <Splide>
             {product.imgs.map((img: string) => {
               return (
-                <>
                 <SplideSlide key={img}>
-                  <Image src={img} alt="Imagem da publicação" />
+                  <img src={img} alt="Imagem da publicação"
+                  />
                 </SplideSlide>
-                </>
               );
             })}
           </Splide>
