@@ -1,0 +1,104 @@
+@import "../styles/colors.scss";
+
+.pgInicial {
+  background-color: $orange;
+  display: flex;
+  translate: 50%;
+  height: 100vh;
+
+  .logoEscrito {
+    display: none;
+  }
+
+  aside img {
+    display: none !important;
+  }
+
+  main {
+    flex: 0.7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .imagem {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 250px;
+      align-items: stretch;
+      text-align: center;
+      border-radius: 50%;
+      background-color: #f8f8f8;
+      padding: 35px;
+
+      img {
+        max-width: 250px;
+        align-self: center;
+      }
+    }
+    p {
+      color: $white;
+      font-size: 24px;
+      line-height: 32px;
+      margin-top: 16px;
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      margin-top: 25px;
+
+      color: $red;
+      text-decoration: none;
+      font-size: 30px;
+      border: solid 4px $dark-brown;
+      border-radius: 36px;
+      padding: 15px 30px;
+    }
+  }
+
+  .image {
+    flex: 10;
+    background: url(../public/assets/img/CB9P4220.jpg) no-repeat center top;
+    background-size: auto 100%;
+    clip-path: polygon(0 0, 70% 0, 100% 100%, 0% 100%);
+    flex: 1;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .pgInicial {
+    display: block;
+    width: 100%;
+    translate: 0;
+    .imagem {
+      display: none !important;
+    }
+    aside img {
+      display: block !important;
+    }
+    .logoEscrito {
+      background-color: white;
+      display: block;
+      padding: 10px;
+    }
+    p {
+      padding: 0 10px;
+      font-size: 20px;
+    }
+    .image {
+      clip-path: none;
+      background-size: 100%;
+    }
+
+    a {
+      color: $red;
+      text-decoration: none;
+      font-size: 30px;
+      border: solid 4px $dark-brown;
+      border-radius: 36px;
+      padding: 10px 20px;
+    }
+  }
+}

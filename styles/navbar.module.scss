@@ -1,0 +1,82 @@
+@import "../styles/colors.scss";
+
+.topnav {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px 30px;
+  align-items: center;
+
+  a {
+    display: block;
+    color: $red;
+    text-align: center;
+    text-decoration: none;
+    font-size: 25px;
+    &.img {
+      align-self: flex-start;
+    }
+
+    img {
+      max-width: 200px !important;
+    }
+    &.active {
+      border-bottom: solid 3px $dark-brown;
+      border-radius: 5%;
+    }
+  }
+
+  .icon {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav {
+    margin: 10px;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    a:not(:first-child) {
+      display: none;
+    }
+    div {
+      display: flex;
+      flex-direction: row;
+      a {
+        display: initial !important;
+      }
+      a:first-child {
+        border: solid 1px $red;
+        padding: 5px 10px;
+        margin-bottom: 46px;
+        border-radius: 5px;
+      }
+      a:nth-child(2) {
+        flex-grow: 4;
+      }
+    }
+
+    &:first-child {
+      margin-bottom: 5px;
+    }
+
+    &.responsive {
+      position: relative;
+      flex-direction: column;
+      a {
+        display: block;
+        margin-bottom: 10px;
+
+        &.active {
+          border: 0;
+          text-decoration: underline;
+          text-decoration-color: $dark-brown;
+          text-decoration-thickness: 3px;
+        }
+      }
+    }
+  }
+}
